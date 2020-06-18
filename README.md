@@ -1,21 +1,18 @@
-<p align="center"><a href="https://kutt.it" title="kutt.it"><img src="https://raw.githubusercontent.com/thedevs-network/kutt/9d1c873897c3f5b9a1bd0c74dc5d23f2ed01f2ec/static/images/logo-github.png" alt="Kutt.it"></a></p>
+<p align="center"><a href="https://uwu.ryukyu" title="Klip"><img src="https://raw.githubusercontent.com/thedevs-network/kutt/9d1c873897c3f5b9a1bd0c74dc5d23f2ed01f2ec/static/images/logo-github.png" alt="Klip"></a></p>
 
-# Kutt.it
+# Klip: Kutt like it's perfect
 
-**Kutt** is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.
+**Klip** is a fork of the modern URL shortener known as Kutt, with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.
 
 _Contributions and bug reports are welcome._
 
-[https://kutt.it](https://kutt.it)
+## Demo
+[https://uwu.ryukyu](https://uwu.ryukyu)
 
-[![Build Status](https://travis-ci.org/thedevs-network/kutt.svg?branch=v2-beta)](https://travis-ci.org/thedevs-network/kutt)
 [![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/thedevs-network/kutt/#contributing)
-[![GitHub license](https://img.shields.io/github/license/thedevs-network/kutt.svg)](https://github.com/thedevs-network/kutt/blob/develop/LICENSE)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/thedevs-network/kutt/.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fthedevs-network%2Fkutt%2F)
+[![GitHub license](https://img.shields.io/github/license/jellykells/klip.svg)](https://github.com/jellykells/klip/blob/develop/LICENSE)
 
 ## Migration from v1
-
-The new version of Kutt is here. In version 2, we used TypeScript and we moved from Neo4j to PostgreSQL database in favor of performance and we're working on adding new features.
 
 If you're coming from v1, refer to [MIGRATION.md](MIGRATION.md) to migrate data from Neo4j to PostgreSQL.
 
@@ -57,7 +54,7 @@ If you're coming from v1, refer to [MIGRATION.md](MIGRATION.md) to migrate data 
 
 You need to have [Node.js](https://nodejs.org/), [PostgreSQL](https://www.postgresql.org/) and [Redis](https://redis.io/) installed.
 
-1. Clone this repository or [download zip](https://github.com/thedevs-network/kutt/archive/v2-beta.zip).
+1. Clone this repository.
 2. Copy `.example.env` to `.env` and fill it properly.
 3. Install dependencies: `npm install`.
 4. Run for development: `npm run dev`.
@@ -69,7 +66,7 @@ You can use Docker to start the app. The simplest way is to just run `docker-com
 
 ## Browser Extensions
 
-Download Kutt's extension for web browsers via below links. You can also find the source code on [kutt-extension](https://github.com/abhijithvijayan/kutt-extension).
+Kutt's extensions for web browsers stil work with Klip! Download them via the below links. You can also find the source code at [kutt-extension](https://github.com/abhijithvijayan/kutt-extension).
 
 - [Chrome](https://chrome.google.com/webstore/detail/kutt/pklakpjfiegjacoppcodencchehlfnpd)
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/kutt/)
