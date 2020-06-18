@@ -3,7 +3,7 @@ import * as p from "../../package.json";
 export default {
   openapi: "3.0.0",
   info: {
-    title: "Kutt.it",
+    title: "Kutt",
     description: "API reference for [http://kutt.it](http://kutt.it).\n",
     version: p.version
   },

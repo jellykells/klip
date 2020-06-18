@@ -116,7 +116,7 @@ const Header: FC = () => {
           >
             <Li>
               <ALink
-                href="//github.com/thedevs-network/kutt"
+                href="//github.com/jellykells/klip"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="GitHub"
