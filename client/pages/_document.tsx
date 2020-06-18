@@ -74,17 +74,6 @@ class AppDocument extends Document<Props> {
 
           {this.props.styleTags}
 
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.recaptchaCallback = function() { window.isCaptchaReady = true; }`
-            }}
-          />
-
-          <script
-            src="https://www.google.com/recaptcha/api.js?render=explicit"
-            async
-            defer
-          />
         </Head>
         <body
           style={{

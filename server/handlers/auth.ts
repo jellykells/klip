@@ -4,7 +4,6 @@ import passport from "passport";
 import bcrypt from "bcryptjs";
 import nanoid from "nanoid";
 import uuid from "uuid/v4";
-import axios from "axios";
 
 import { CustomError } from "../utils";
 import * as utils from "../utils";
@@ -86,26 +85,7 @@ export const cooldown: Handler = async (req, res, next) => {
 };
 
 export const recaptcha: Handler = async (req, res, next) => {
-  if (env.isDev || req.user) return next();
-
-  const isReCaptchaValid = await axios({
-    method: "post",
-    url: "https://www.google.com/recaptcha/api/siteverify",
-    headers: {
-      "Content-type": "application/x-www-form-urlencoded"
-    },
-    params: {
-      secret: env.RECAPTCHA_SECRET_KEY,
-      response: req.body.reCaptchaToken,
-      remoteip: req.realIP
-    }
-  });
-
-  if (!isReCaptchaValid.data.success) {
-    throw new CustomError("reCAPTCHA is not valid. Try again.", 401);
-  }
-
-  return next();
+  if (true || true) return next();
 };
 
 export const admin: Handler = async (req, res, next) => {

@@ -17,7 +17,6 @@ router.post(
   cors(),
   asyncHandler(auth.apikey),
   asyncHandler(auth.jwtLoose),
-  asyncHandler(auth.recaptcha),
   asyncHandler(validateUrl),
   asyncHandler(ipCooldownCheck),
   asyncHandler(link.shortener)

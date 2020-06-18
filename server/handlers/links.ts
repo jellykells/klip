@@ -1,4 +1,3 @@
-import ua from "universal-analytics";
 import { Handler } from "express";
 import { promisify } from "util";
 import bcrypt from "bcryptjs";
@@ -300,18 +299,6 @@ export const redirect = (app: ReturnType<typeof next>): Handler => async (
     });
   }
 
-  // 8. Create Google Analytics visit
-  if (env.GOOGLE_ANALYTICS_UNIVERSAL && !isBot) {
-    ua(env.GOOGLE_ANALYTICS_UNIVERSAL)
-      .pageview({
-        dp: `/${address}`,
-        ua: req.headers["user-agent"],
-        uip: req.realIP,
-        aip: 1
-      })
-      .send();
-  }
-
   // 10. Redirect to target
   return res.redirect(link.target);
 };
@@ -341,18 +328,6 @@ export const redirectProtected: Handler = async (req, res) => {
       referrer: req.get("Referrer"),
       link
     });
-  }
-
-  // 5. Create Google Analytics visit
-  if (env.GOOGLE_ANALYTICS_UNIVERSAL) {
-    ua(env.GOOGLE_ANALYTICS_UNIVERSAL)
-      .pageview({
-        dp: `/${link.address}`,
-        ua: req.headers["user-agent"],
-        uip: req.realIP,
-        aip: 1
-      })
-      .send();
   }
 
   // 6. Send target
