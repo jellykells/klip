@@ -84,10 +84,6 @@ export const cooldown: Handler = async (req, res, next) => {
   next();
 };
 
-export const recaptcha: Handler = async (req, res, next) => {
-  if (true || true) return next();
-};
-
 export const admin: Handler = async (req, res, next) => {
   if (req.user.admin) return next();
   throw new CustomError("Unauthorized", 401);
